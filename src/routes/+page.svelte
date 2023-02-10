@@ -1,7 +1,10 @@
-<h1 class="text-3xl font-bold underline">Hello world!</h1>
+<script>
+  import Body from "../lib/shared/components/Landing/Body.svelte";
+  let isLoading = false;
+</script>
 
-<style lang="postcss">
-	:global(html) {
-		background-color: theme(colors.gray.100);
-	}
-</style>
+{#if isLoading}
+  <p>Loading</p>
+{:else}
+  <Body />
+{/if}
