@@ -1,5 +1,10 @@
 <script>
-  import App from "../lib/components/App.svelte";
+  import Body from "../lib/shared/components/Landing/Body.svelte";
+  let isLoading = false;
 </script>
 
-<App />
+{#if isLoading}
+  <p>Loading</p>
+{:else}
+  <Body />
+{/if}

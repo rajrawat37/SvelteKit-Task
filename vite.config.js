@@ -4,8 +4,10 @@ import { sveltekit } from '@sveltejs/kit/vite';
 export default {
 	plugins: [sveltekit()],
 	server: {
+		host:true,
 		fs: {
-			strict: false
+			strict: false,
+			allow: [".."],
 		}
 	}
 };
